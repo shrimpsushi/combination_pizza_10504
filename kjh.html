@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      h4{
+        position: absolute;
+        top:25px;
+        left: 210px;
+      }
+      }
+    </style>
+
+    <title>Combination</title>
+    <h1>조합 계산기 </h1>
+  </head>
+  <body>
+    <h3>입력</h3>
+    "n의값"
+    <input name="N" type="text" id="N" value="4" />
+    "r의값"
+    <input name="R" type="text" id="R" value="2" />
+    <button onclick="cal();">Calculate</button>
+
+    <h3>결과값</h3>
+    <p id="ans"></p>
+    <script type="text/javascript">
+      function cal() {
+        var n = document.getElementById("N").value;
+        var r = document.getElementById('R').value;
+        var i, answer = 1;
+        for (i = 1; i <= n; i++) {
+          answer *= i;
+        }
+        for (i = 1; i <= r; i++) {
+          answer /= i;
+        }
+        for (i = 1; i <= (n - r); i++) {
+          answer /= i;
+        }
+        document.getElementById('ans').innerHTML = answer;
+      }
+    </script>
+    <p class="school"><h4>10504 김주형</h4></p>
+  </body>
+</html>
